@@ -21,10 +21,11 @@ h6 {
   color: green;
   font-size: 20px;
 }
-footer {
-  font-size: 12px;
-}
 p {
+  font-size: 12px;
+  margin: -22px 38px;
+}
+footer {
   color: gray;
   opacity: 0.9;
   font-weight: bold;
