@@ -1,0 +1,68 @@
+h1 {
+  color: skyblue;
+  font-size: 45px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  color: blue;
+  font-size: 28px;
+}
+h4 {
+  color: indigo;
+  font-weight: bolder;
+  font-size: 18px;
+}
+h5 {
+  font-size: 50px;
+}
+h6 {
+  color: green;
+  font-size: 20px;
+}
+footer {
+  color: gray;
+  opacity: 0.9;
+  font-weight: bold;
+  font-family: lora;
+  text-align: left;
+  font-size: 60px;
+}
+
+a {
+  font-weight: bold;
+  font-size: 18px;
+}
+ul {
+  list-style: none;
+}
+.week-date {
+  color: indigo;
+  font-weight: bolder;
+}
+.card-title {
+  font-size: 30px;
+}
+.highest-temperature {
+  color: olive;
+}
+.lowest-temperature {
+  color: olivedrab;
+}
+.day-of-week {
+  color: blue;
+}
+.weather-background {
+  padding: 25px;
+  border: 1px solid skyblue;
+  margin: 20px;
+  border-radius: 25px;
+  max-width: 100%;
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
