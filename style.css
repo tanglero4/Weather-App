@@ -22,6 +22,9 @@ h6 {
   font-size: 20px;
 }
 footer {
+  font-size: 12px;
+}
+p {
   color: gray;
   opacity: 0.9;
   font-weight: bold;
@@ -36,6 +39,9 @@ a {
 }
 ul {
   list-style: none;
+}
+.source-link {
+  font-size: 12px;
 }
 .week-date {
   color: indigo;
@@ -57,6 +63,7 @@ ul {
   padding: 25px;
   border: 1px solid skyblue;
   margin: 20px;
+
   border-radius: 25px;
   max-width: 100%;
   background: linear-gradient(
@@ -65,4 +72,9 @@ ul {
     rgb(255, 237, 237) 47.9%,
     rgb(255, 255, 231) 100.2%
   );
+}
+.main {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
 }
