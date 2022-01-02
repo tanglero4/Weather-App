@@ -36,7 +36,7 @@ footer {
 
 a {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }
 ul {
   list-style: none;
@@ -79,4 +79,9 @@ ul {
   max-width: 800px;
   display: block;
   margin: 0 auto;
+}
+.temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -18px;
 }
