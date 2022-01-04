@@ -31,8 +31,13 @@ let temperature = document.querySelector("#farenheit-converter");
 temperature.addEventListener("submit", convert);
 
 function showTemp(response) {
-  console.log(response.data.main.temp);
   let temperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${temperature}°C`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let speedElement = document.querySelector("#speed");
+  speedElement.innerHTML = Math.round(response.data.wind.speed);
 }
