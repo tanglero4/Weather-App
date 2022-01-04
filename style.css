@@ -83,3 +83,17 @@ li:first-letter {
   font-size: 16px;
   top: -18px;
 }
+.search-text {
+  border-radius: 5px;
+  border-color: skyblue;
+}
+.search-button {
+  background-color: skyblue;
+  border: none;
+  border-radius: 5px;
+}
+.search-button:hover {
+  color: skyblue;
+  background-color: white;
+  transition: 200ms ease-in-out;
+}
