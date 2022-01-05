@@ -78,7 +78,7 @@ li:first-letter {
   font-weight: 600;
   font-style: italic;
 }
-.temperature .units {
+.temperatures .units {
   position: relative;
   font-size: 16px;
   top: -18px;
@@ -96,4 +96,9 @@ li:first-letter {
   color: skyblue;
   background-color: white;
   transition: 200ms ease-in-out;
+}
+.temperatures .active {
+  color: skyblue;
+  cursor: default;
+  text-decoration: none;
 }
