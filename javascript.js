@@ -15,6 +15,26 @@ if (minute < 10) {
 
 h2.innerHTML = `${day} ${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+              <div class="col-2">
+                    <div class="weather-forecast-date">Thu</div>
+                        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="36">
+                        <div class="weather-forcast-temperature">
+                          <span class="weather-forecast-max">18°</span>
+                          <span class="weather-forecast-min">12°</span>
+                        </div>
+                </div>
+                </div>
+                  `;
+  forecastHTML = `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-city-input");
@@ -32,8 +52,6 @@ function showTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   let speedElement = document.querySelector("#speed");
   let iconElement = document.querySelector("#icon");
-
-  celsiusTemperature = response.data.main.temp;
 
   h1.innerHTML = `${temperature}°`;
   descriptionElement.innerHTML = response.data.weather[0].description;
