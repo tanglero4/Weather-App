@@ -15,14 +15,17 @@ if (minute < 10) {
 
 h2.innerHTML = `${day} ${hour}:${minute}`;
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  let days = ["Sat", "Sun", "Mon"];
+
   let forecastHTML = `<div class="row">`;
+
   forecastHTML =
     forecastHTML +
     `
               <div class="col-2">
-                    <div class="weather-forecast-date">Thu</div>
+                    <div class="weather-forecast-date">${day}</div>
                         <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="36">
                         <div class="weather-forcast-temperature">
                           <span class="weather-forecast-max">18°</span>
@@ -31,8 +34,14 @@ function displayForecast() {
                 </div>
                 </div>
                   `;
-  forecastHTML = `</div`;
+
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  let apiKey = "f811ab7997433dcd9d82103a06077507";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function search(event) {
@@ -62,7 +71,11 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", search);
+
+displayForecast();
