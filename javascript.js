@@ -90,8 +90,18 @@ function showTemp(response) {
 
   getForecast(response.data.coord);
 }
+function init() {
+  const defaultCity = "Orlando";
+  let apiKey = "f811ab7997433dcd9d82103a06077507";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showTemp);
+  let footer = document.querySelector("footer");
+  footer.innerHTML = defaultCity;
+}
+
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", search);
 
+init();
 displayForecast();
